@@ -1,0 +1,28 @@
+#sets up a service named "db"
+#uses the postgres:11 image from hub.docker.com
+#creates a container named "clinic_db"
+#connects port 5432 inside Docker as port 54320 on the host machine
+#uses a volume named "clinic_data" for storing the database data.
+#Even if the container and image are deleted, the volume will remain unless explicitly deleted using docker volume rm
+
+  #start: $ docker-compose up -d
+#See the logs:  $ docker logs -f clinic_db
+#Running psql:  $ docker exec -it clinic_db psql -U postgres
+#and creating DB and user
+#   create database clinic_data;
+#   create user clinic_user with encrypted password 'pAssw0rd';
+#   grant all privileges on database clinic_data to clinic_user;
+#   hit CTRL+D to exit
+
+#Connection string: jdbc:mysql://localhost:15432/clinic_data
+version: "3"
+services:
+  db:
+    image: "postgres:11"
+    container_name: "clinic_db"
+    ports:
+      - "15432:5432"
+    volumes:
+      - clinic_data:/var/lib/postgresql/data
+volumes:
+  clinic_data:
