@@ -14,6 +14,8 @@ pairs:
   sv: Shubhangi Vishwakarma
   ag: Albert Gorski
   lg: Leon Graser
+  aw: Achim Wiedemann
+  fs: Florian Schwanz
 email:
   domain: bosch.com
 email_addresses:
@@ -32,4 +34,5 @@ email_addresses:
   sv: fixed-term.shubhangi.vishwakarma@de.bosch.com
   ag: albert.gorski@de.bosch.com
   lg: leon.graser@bosch-si.com
-
+  aw: achim.wiedemann@de.bosch.com
+  fs: florian.schwanz2@de.bosch.com
