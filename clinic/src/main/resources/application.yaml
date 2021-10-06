@@ -13,3 +13,5 @@ spring:
     properties:
       hibernate:
         default_schema: clinic_data
+        temp:
+          use_jdbc_metadata_defaults: false
