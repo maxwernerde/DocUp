@@ -6,7 +6,7 @@ plugins {
 
 group = "com.bosch.onsite"
 version = "0.0.1-SNAPSHOT"
-sourceCompatibility = JavaVersion.VERSION_11
+sourceCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
     mavenCentral()
@@ -20,6 +20,8 @@ dependencies {
 
     testImplementation "org.junit.jupiter:junit-jupiter-api:5.5.0"
     testImplementation "org.junit.jupiter:junit-jupiter-engine:5.5.0"
+    testRuntimeOnly "org.junit.platform:junit-platform-commons:1.7.0"
+    testRuntimeOnly "org.junit.platform:junit-platform-engine:1.7.0"
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
